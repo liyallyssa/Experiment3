@@ -1,0 +1,48 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+  float numbers[10] = { -10, 0, 5, 7, 11, 1, 20.5, 4, 17, 12 };
+  float smallest = 0;
+  float largest = 0;
+  float total = 0;
+  float ave;
+
+  for (int i = 0; i < 10; i++)
+  {
+    if (numbers[i] < smallest)
+    {
+      smallest = numbers[i];
+    }
+  }
+
+  cout << "The smallest number is: " << smallest << endl;
+
+  for (int i = 0; i < 10; i++)
+  {
+    if (numbers[i] > largest)
+    {
+      largest = numbers[i];
+    }
+  }
+
+  cout << "The largest number is: " << largest << endl;
+
+  for (int i = 0; i < 10; i++)
+  {
+    total += numbers[i];
+  }
+
+  cout << "The sum of the array is: " << total << endl;
+
+  ave = total / 10;
+
+  cout << "The average is: " << ave << endl;
+  
+  _getch();
+  return 0;
+}
